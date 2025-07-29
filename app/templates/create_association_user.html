@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h2>Criar Utilizador para Associação</h2>
+            <p class="text-muted">Criar acesso de login para uma associação</p>
+            
+            <div class="mb-3">
+                <a href="{{ url_for('manage_associations') }}" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Voltar às Associações
+                </a>
+            </div>
+            
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="association_id" class="form-label">Associação</label>
+                    <select class="form-select" id="association_id" name="association_id" required>
+                        <option value="">Selecionar associação...</option>
+                        {% for association in associations %}
+                        <option value="{{ association.id }}">{{ association.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <div class="form-text">Selecione a associação para a qual criar o acesso.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email de Login</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="form-text">Este será o email usado pela associação para fazer login.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                    <div class="form-text">Password inicial para a associação (pode ser alterada depois).</div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Criar Utilizador
+                </button>
+                <a href="{{ url_for('manage_associations') }}" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,18 @@
+nohup: ignoring input
+[2025-06-18 11:20:25 -0400] [35312] [INFO] Starting gunicorn 21.2.0
+[2025-06-18 11:20:25 -0400] [35312] [INFO] Listening at: http://0.0.0.0:5000 (35312)
+[2025-06-18 11:20:25 -0400] [35312] [INFO] Using worker: sync
+[2025-06-18 11:20:25 -0400] [35313] [INFO] Booting worker with pid: 35313
+[2025-06-18 11:20:25 -0400] [35314] [INFO] Booting worker with pid: 35314
+[2025-06-18 11:20:25 -0400] [35315] [INFO] Booting worker with pid: 35315
+[2025-06-18 11:20:25 -0400] [35316] [INFO] Booting worker with pid: 35316
+[2025-07-01 11:32:35 -0400] [35313] [INFO] Worker exiting (pid: 35313)
+Administrador padrão criado: accvalongo@gmail.com / admin123
+[2025-07-01 11:32:35 -0400] [35312] [INFO] Handling signal: term
+[2025-07-01 11:32:35 -0400] [35314] [INFO] Worker exiting (pid: 35314)
+Administrador já existe: accvalongo@gmail.com
+[2025-07-01 11:32:35 -0400] [35316] [INFO] Worker exiting (pid: 35316)
+[2025-07-01 11:32:35 -0400] [35315] [INFO] Worker exiting (pid: 35315)
+Administrador já existe: accvalongo@gmail.com
+Administrador já existe: accvalongo@gmail.com
+[2025-07-01 11:32:36 -0400] [35312] [INFO] Shutting down: Master

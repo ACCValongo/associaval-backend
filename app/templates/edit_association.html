@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="content-section">
+        <legend class="border-bottom mb-4">Editar Associação: {{ association.name }}</legend>
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.name.label(class="form-control-label") }}
+                {{ form.name(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.address.label(class="form-control-label") }}
+                {{ form.address(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.freguesia.label(class="form-control-label") }}
+                <small class="form-text text-muted">Selecione uma ou mais freguesias onde a associação atua (use Ctrl+clique para seleção múltipla)</small>
+                {{ form.freguesia(class="form-control form-control-lg", multiple=true, size="5") }}
+            </div>
+            <div class="form-group">
+                {{ form.phone.label(class="form-control-label") }}
+                {{ form.phone(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.email.label(class="form-control-label") }}
+                <small class="form-text text-muted">Email usado para o login da associação</small>
+                {{ form.email(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.social_media.label(class="form-control-label") }}
+                {{ form.social_media(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.description.label(class="form-control-label") }}
+                {{ form.description(class="form-control form-control-lg", rows="3") }}
+            </div>
+            <div class="form-group">
+                {{ form.activity_categories.label(class="form-control-label") }}
+                <small class="form-text text-muted">Selecione uma ou mais categorias de atividades (use Ctrl+clique para seleção múltipla)</small>
+                {{ form.activity_categories(class="form-control form-control-lg", multiple=true, size="10") }}
+            </div>
+            <div class="form-group">
+                {{ form.other_activities.label(class="form-control-label") }}
+                <small class="form-text text-muted">Especifique outras atividades não listadas nas categorias acima</small>
+                {{ form.other_activities(class="form-control form-control-lg") }}
+            </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
