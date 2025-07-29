@@ -10,7 +10,7 @@ app.config["SECRET_KEY"] = "your_secret_key_here"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///site.db"
 
 # Configurar CORS para permitir requisições do frontend
-CORS(app, origins=["https://gpazdluh.manus.space", "https://gbtmwecv.manus.space", "https://jomdceve.manus.space", "https://wrggdzow.manus.space"])
+CORS(app, origins=["https://gpazdluh.manus.space", "https://gbtmwecv.manus.space", "https://jomdceve.manus.space", "https://wrggdzow.manus.space", "https://associaval.netlify.app"])
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
